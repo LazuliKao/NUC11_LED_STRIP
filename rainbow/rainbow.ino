@@ -61,7 +61,7 @@ void loop() {
     }
   for (unsigned int i = 0; i < skull.numPixels(); i++) {
       unsigned long pixelHue = (t*skull.numPixels()/NUM_LEDS_SKULL)+(i * 65536UL / skull.numPixels()); 
-      skull.setPixelColor(i, skull.gamma32(skull.ColorHSV(pixelHue))); 
+      skull.setPixelColor(i, 0); 
       skull.show();
     }
  

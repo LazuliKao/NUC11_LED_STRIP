@@ -8,7 +8,6 @@ FastLED_NeoPixel<10, 6, NEO_GRB> io;
 FastLED_NeoPixel<20, 7, NEO_GRB> left; 
 FastLED_NeoPixel<20, 8, NEO_GRB> right;
 FastLED_NeoPixel<15, 9, NEO_GRB> skull;      
-     
 
 void setup() {
   
@@ -22,7 +21,7 @@ void setup() {
   left.setBrightness(STRIP_MAX);
 
   skull.begin(); 
-  skull.setBrightness(SKULL_MAX);
+  skull.setBrightness(0);
 
 }
 
@@ -45,7 +44,7 @@ void loop() {
   skull.setPixelColor((int)(((sin(t)+1)*5)), skull.Color(255, 255, 255));  
   skull.show();
  
-  delay(1); //in milliseconds
+  delay(1000); //in milliseconds
 
   io.setPixelColor((int)(((sin(t)+1)*2.5)), io.Color(0, 0, 0));  
   io.show();
